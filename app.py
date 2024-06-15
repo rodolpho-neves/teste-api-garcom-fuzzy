@@ -11,11 +11,11 @@ model = FuzzyModelGorjeta()
 
 app = Flask(__name__)
 
-#@app.route('/', methods=['GET'])
-#def index():
-#    #nota_json = request.get_json()
-#    response = model.model_predict(8, 2)
-#    return f"Teste das notas servico=8 e comida=2, gorjeta: {response}"
+@app.route('/', methods=['GET'])
+def index():
+    #nota_json = request.get_json()
+    response = model.model_predict(8, 2)
+    return f"Olá! Aqui temos um teste para o modelo: {response}"
 
 @app.route('/fuzzygorjeta/predict', methods=['POST'])
 def predict():
