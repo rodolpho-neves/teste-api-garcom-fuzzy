@@ -53,6 +53,6 @@ class FuzzyModelGorjeta():
         resposta = dict()
         resposta['comida'] = comida
         resposta['servico'] = servico
-        resposta['gorjeta'] = self.FS.Mamdani_inference(["Gorjeta"])
+        resposta['gorjeta'] = self.FS.Mamdani_inference(["Gorjeta"])["Gorjeta"]
         
         return json.dumps(resposta)
